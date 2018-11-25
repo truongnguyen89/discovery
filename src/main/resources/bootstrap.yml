@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: discovery
+logging:
+  pattern:
+    console: "[%d{dd/MM/yyyy HH:mm:ss,SSS}] %m%n"
+    file: "[%d{dd/MM/yyyy HH:mm:ss,SSS}] %m%n"
+server:
+  port: 9000
+
+eureka:
+  datacenter: main
+  environment: default
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enableSelfPreservation: false
+
+management:
+  security:
+    enabled: false
