@@ -4,8 +4,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.core.env.Environment;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoDiscoveryure.SpringBootApplication;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,10 +21,10 @@ import java.net.InetAddress;
 @SpringBootApplication
 public class DiscoveryApplication {
 
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 //        SpringApplication.run(DiscoveryApplication.class, args);
 //    }
-private static final Logger LOGGER = LogManager.getLogger(DiscoveryApplication.class);
+    private static final Logger LOGGER = LogManager.getLogger(DiscoveryApplication.class);
 
     public static void main(String[] args) {
         long id = System.currentTimeMillis();
